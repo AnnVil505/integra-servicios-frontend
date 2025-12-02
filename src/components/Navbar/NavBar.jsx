@@ -3,7 +3,6 @@ import { Outlet, useNavigate, Link } from 'react-router-dom'
 import './NavBar.css'
 import Logo from '../../assets/Logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDigg } from '@fortawesome/free-brands-svg-icons'
 import { faList } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
@@ -80,7 +79,7 @@ const NavBar = () => {
     return (
         <>
             <nav>
-                <Link to='/' className='logo'><FontAwesomeIcon icon={faDigg} className='icono' /><strong>Integra servicios</strong></Link>
+                <Link to='/' className='logo'><img src={Logo} className='icono' alt="Logo Integra" /><strong>Integra servicios</strong></Link>
                 <ul className="nav__links">
                     <Link name='info-usuario' to='/info-usuario' className={`option ${btnSelected['info-usuario']}`} id='userOption' onClick={handleClick} ><FontAwesomeIcon icon={faUser} className='icono'/>Mi cuenta</Link>
                     <Link name='recursos' to='/recursos' className={`option ${btnSelected['recursos']}`} id='recursosOption' onClick={handleClick} ><FontAwesomeIcon icon={faList} className='icono' />Recursos</Link>
